@@ -15,8 +15,6 @@
 # production
 /build
 
-# public folder (images, videos, assets)
-/public/
 
 # misc
 .DS_Store
