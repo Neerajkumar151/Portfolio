@@ -4,15 +4,6 @@
 
 ![Modern Portfolio using Next.js and Framer Motion](/.github/images/Neerajbg.png "Modern Portfolio using Next.js and Framer Motion")
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/NeerajBrothkumarers/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers/modern-portfolio/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers/modern-portfolio/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/NeerajBrothkumarers/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers/modern-portfolio/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/NeerajBrothkumarers/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers/modern-portfolio/commits "Github commits")
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-NETLIFY-ID/deploy-status)](https://YOUR-NETLIFY-URL.netlify.app/ "Netlify Status")
-[![GitHub issues](https://flat.badgen.net/github/issues/NeerajBrothkumarers/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers/modern-portfolio/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/NeerajBrothkumarers/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/NeerajBrothkumarers/modern-portfolio/pulls "GitHub pull requests")
-
 ---
 
 <details>
