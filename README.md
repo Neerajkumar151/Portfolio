@@ -38,6 +38,7 @@ Here is the folder structure of this app:
 ```bash
 modern-portfolio/
   |- components/
+  |- lib/
   |- pages/
     |-- about/
     |-- contact/
