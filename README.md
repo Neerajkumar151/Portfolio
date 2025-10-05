@@ -2,7 +2,7 @@
 
 # Modern Portfolio using Next.js and Framer Motion
 
-![Modern Portfolio using Next.js and Framer Motion](/.github/images/img_main.png "Modern Portfolio using Next.js and Framer Motion")
+![Modern Portfolio using Next.js and Framer Motion](/.github/images/Neerajbg.png "Modern Portfolio using Next.js and Framer Motion")
 
 [![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
 [![GitHub license](https://flat.badgen.net/github/license/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/blob/main/LICENSE "GitHub license")
@@ -81,13 +81,13 @@ modern-portfolio/
 
 ## :camera: Screenshots:
 
-![Modern UI/UX](/.github/images/img1.png "Modern UI/UX")
+![Modern UI/UX](/.github/images/image2.PNG "Modern UI/UX")
 
-![Services](/.github/images/img2.png "Services")
+![Services](/.github/images/image3.PNG "Services")
 
-![Showcase Projects](/.github/images/img3.png "Showcase Projects")
+![Showcase Projects](/.github/images/image4.PNG "Showcase Projects")
 
-![Contact Form](/.github/images/img4.png "Contact Form")
+![Contact Form](/.github/images/imge5.PNG "Contact Form")
 
 ## :gear: Tech Stack
 
