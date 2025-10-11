@@ -48,7 +48,7 @@ const Contact = () => {
       </video>
 
       {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-primary/10 z-10 pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-primary/20 z-10 pointer-events-none"></div>
 
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full relative z-20">
         {/* text & form */}
@@ -59,14 +59,14 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-12"
+            className="h2 text-center mb-12 text-white"
           >
             Let's <span className="text-accent">connect.</span>
           </motion.h2>
 
           {/* form */}
           <motion.form
-            variants={fadeIn("up", 0.4)}
+            variants={fadeIn("up", 0.1)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -81,7 +81,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="input"
+                className="input bg-white/0 text-white placeholder-white/70 border border-white/40 focus:bg-white/30 focus:border-accent focus:outline-none shadow-md"
                 disabled={isLoading}
                 required
               />
@@ -89,7 +89,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="E-mail"
-                className="input"
+                className="input bg-white/0 text-white placeholder-white/70 border border-white/40 focus:bg-white/30 focus:border-accent focus:outline-none shadow-md"
                 disabled={isLoading}
                 required
               />
@@ -98,28 +98,28 @@ const Contact = () => {
               type="text"
               name="subject"
               placeholder="Subject"
-              className="input"
+              className="input bg-white/0 text-white placeholder-white/70 border border-white/40 focus:bg-white/30 focus:border-accent focus:outline-none shadow-md"
               disabled={isLoading}
               required
             />
             <textarea
               name="message"
               placeholder="Message..."
-              className="textarea"
+              className="textarea bg-white/0 text-white placeholder-white/70 border border-white/40 focus:bg-white/30 focus:border-accent focus:outline-none shadow-md"
               disabled={isLoading}
               required
             />
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative bg-white/10 text-white hover:bg-accent hover:text-black"
               disabled={isLoading}
             >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+              <span className="group-hover:-translate-y-[120%] group-hover:opacity-10 transition-all duration-500">
                 Let's talk
               </span>
 
               <BsArrowRight
-                className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
+                className="-translate-y-[120%] opacity-10 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
               />
             </button>
           </motion.form>
@@ -133,3 +133,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
