@@ -72,13 +72,13 @@ const WorkSlider = () => {
       {/* Custom Arrows */}
       <button
         onClick={() => swiperRef.current?.slidePrev()}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 p-3 bg-white/20 rounded-full hover:bg-white/40 transition"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 p-3 bg-black/30 rounded-full hover:bg-white/40 transition text-black"
       >
         &#8592;
       </button>
       <button
         onClick={() => swiperRef.current?.slideNext()}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 z-20 p-3 bg-white/20 rounded-full hover:bg-white/40 transition"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 z-20 p-3 bg-black/30 rounded-full hover:bg-white/40 transition text-black"
       >
         &#8594;
       </button>
