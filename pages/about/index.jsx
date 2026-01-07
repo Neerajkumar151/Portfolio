@@ -13,11 +13,13 @@ import {
   SiMysql,
   SiC,
   SiCplusplus,
+  SiPython,
   SiVisualstudiocode,
   SiGithub,
   SiGit,
   SiLeetcode,
   SiGeeksforgeeks,
+  SiOpenai,
 } from "react-icons/si";
 
 import Circles from "../../components/Circles";
@@ -28,30 +30,37 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
-        icons: [FaHtml5, FaCss3, FaJs, FaReact, SiMysql, SiFigma, SiMongodb],
+        title: "Generative AI",
+        icons: [SiOpenai, SiPython],
       },
-      { title: "Languages", icons: [SiC, SiCplusplus] },
       {
-        title: "Tools & Platforms",
-        icons: [SiGithub, SiVisualstudiocode, SiGit, SiLeetcode, SiGeeksforgeeks],
+        title: "Web Development",
+        icons: [FaHtml5, FaCss3, FaJs, FaReact, SiMysql, SiMongodb],
+      },
+      {
+        title: "Languages",
+        icons: [SiC, SiCplusplus, SiPython],
+      },
+      {
+        title: "Tools",
+        icons: [SiGithub, SiGit, SiVisualstudiocode, SiLeetcode, SiGeeksforgeeks],
       },
     ],
   },
   {
-    title: "Achievements",
+    title: "Projects",
     info: [
       {
-        title: "Completed 10-week Cloud Computing Virtual Internship by Amazon AWS",
-        stage: "2024",
+        title: "Built AI-powered applications using LLM APIs and chat-based interfaces",
+        stage: "2024 – 2025",
       },
       {
-        title: "Built 4+ full-stack projects including Skydrive (Cloud Storage App)",
-        stage: "2023 - 2025",
+        title: "Developed full-stack platforms integrating AI features into real-world use cases",
+        stage: "2024 – 2025",
       },
       {
-        title: "Active problem solver on LeetCode & GFG, improving DSA skills daily",
-        stage: "2024 - Present",
+        title: "Worked on AI chatbots, dashboards, and secure backend integrations",
+        stage: "2024 – 2025",
       },
     ],
   },
@@ -59,11 +68,11 @@ export const aboutData = [
     title: "Experience",
     info: [
       {
-        title: "Frontend Developer (Next.js + Firebase Stack)",
-        stage: "2023 - Present",
+        title: "Generative AI Project Developer (Self-driven)",
+        stage: "2024 – Present",
       },
       {
-        title: "Hackathon Participant - Bajaj Finserv Health Hackathon (AI + Node.js)",
+        title: "Hackathon Participant – AI-based Web Applications",
         stage: "2025",
       },
     ],
@@ -72,8 +81,9 @@ export const aboutData = [
     title: "Education",
     info: [
       {
-        title: "B.Tech in Information Technology - G.L. Bajaj Institute of Technology & Management",
-        stage: "2022 - 2026",
+        title:
+          "B.Tech in Information Technology – G.L. Bajaj Institute of Technology & Management",
+        stage: "2022 – 2026",
       },
     ],
   },
@@ -108,26 +118,28 @@ const About = () => {
             animate="show"
             className="text-3xl md:text-4xl xl:text-[2.8rem] font-bold mb-4 leading-snug text-center xl:text-left"
           >
-            neeraj kumar. <br />
-            <span className="text-accent">Passion</span> drives innovation,<br />
-            and innovation builds the future.
+            Neeraj Kumar <br />
+            <span className="text-accent">Generative AI</span> Developer
           </motion.h2>
 
           {/* Paragraph */}
           <motion.p
-            variants={fadeIn("right", 0.4)}
-            initial="hidden"
-            animate="show"
-            className="max-w-[560px] text-sm md:text-base leading-relaxed text-white/80 mb-8 text-center xl:text-left"
-          >
-            I’m <span className="text-accent font-semibold">Neeraj Kumar</span>, a final-year IT student at 
-            <span className="text-accent font-semibold"> G.L. Bajaj Institute of Technology and Management</span>. 
-            I specialize in <span className="font-semibold">frontend development</span> and love building 
-            <span className="font-semibold"> interactive, AI-powered SaaS web applications</span>. 
-            I’m passionate about improving my <span className="font-semibold">DSA skills</span>, exploring 
-            <span className="font-semibold"> modern tech stacks</span> like Next.js + Firebase,cler,supabase, and building 
-            products that merge <span className="font-semibold">design, technology, and innovation</span>.
-          </motion.p>
+  variants={fadeIn("right", 0.4)}
+  initial="hidden"
+  animate="show"
+  className="max-w-[560px] text-sm md:text-base leading-relaxed text-white/80 mb-8 text-center xl:text-left"
+>
+  I’m a final-year IT student with hands-on experience building
+  <span className="text-accent font-semibold"> AI-powered web applications </span>.
+  I work with
+  <span className="text-accent font-semibold"> LLM APIs, chatbots, and full-stack systems </span>
+  to create practical solutions in domains like
+  <span className="text-accent font-semibold"> agriculture and finance </span>.
+  I enjoy solving problems, learning new technologies, and turning ideas
+  into
+  <span className="text-accent font-semibold"> intelligent, user-friendly products </span>.
+</motion.p>
+
 
           {/* Counters */}
           <motion.div
@@ -137,9 +149,9 @@ const About = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center xl:text-left"
           >
             {[
-              { end: 6, label: "Completed Projects" },
-              { end: 2, label: "Virtual Internships by AWS and Cisco" },
-              { end: 300, label: "DSA Problems Solved on Leetcode and GFG" },
+              { end: 6, label: "Projects Built" },
+              { end: 3, label: "AI-Based Applications" },
+              { end: 300, label: "DSA Problems Solved" },
               { end: 2, label: "Hackathons Participated" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center xl:items-start">
@@ -170,7 +182,11 @@ const About = () => {
                 className={`capitalize cursor-pointer xl:text-lg relative pb-1 
                 after:content-[''] after:absolute after:bottom-0 after:left-0 
                 after:h-[2px] after:w-0 after:bg-accent after:transition-all
-                ${index === itemI ? "text-accent after:w-full" : "text-white/60 hover:text-white"}
+                ${
+                  index === itemI
+                    ? "text-accent after:w-full"
+                    : "text-white/60 hover:text-white"
+                }
                 `}
               >
                 {item.title}

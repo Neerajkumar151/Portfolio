@@ -11,6 +11,7 @@ const Work = () => {
 
       <div className="container mx-auto relative z-20">
         <div className="flex flex-col xl:flex-row gap-x-12 gap-y-10 xl:gap-y-0">
+          
           {/* Text Section */}
           <div className="text-center xl:text-left flex flex-col xl:w-[30vw] gap-y-6">
             <motion.h2
@@ -30,14 +31,15 @@ const Work = () => {
               exit="hidden"
               className="text-white/70 text-base sm:text-lg leading-relaxed max-w-[500px] mx-auto xl:mx-0"
             >
-              Explore <span className="text-accent font-semibold">6 hand-picked projects</span> 
-              that highlight my journey in{" "}
-              <span className="text-accent font-semibold">Frontend Development</span>,{" "}
-              <span className="text-accent font-semibold">Problem Solving (DSA)</span>, and{" "}
-              leveraging <span className="text-accent font-semibold">AI tools</span> to craft 
-              modern, interactive, and user-friendly web applications. Each project demonstrates 
-              my passion for building and learning core computer science concepts like{" "}
-              <span className="text-accent font-semibold">OOPs, DBMS, SQL, and CN</span>.
+              Explore <span className="text-accent font-semibold">AI-powered and full-stack projects</span>{" "}
+              that showcase my experience building{" "}
+              <span className="text-accent font-semibold">Generative AI applications</span>,{" "}
+              <span className="text-accent font-semibold">interactive web platforms</span>, and{" "}
+              real-world solutions using{" "}
+              <span className="text-accent font-semibold">LLM APIs, chatbots, and backend systems</span>.
+              These projects reflect my focus on writing clean code, solving problems, and applying{" "}
+              <span className="text-accent font-semibold">core CS concepts</span> such as{" "}
+              <span className="text-accent font-semibold">OOP, DBMS, SQL, and Computer Networks</span>.
             </motion.p>
 
             <motion.p
@@ -47,7 +49,7 @@ const Work = () => {
               exit="hidden"
               className="text-accent font-semibold uppercase tracking-wider text-sm sm:text-base mt-2"
             >
-              Click any project to view details or explore it live 🚀
+              Click on any project to view details or explore it live 🚀
             </motion.p>
           </div>
 

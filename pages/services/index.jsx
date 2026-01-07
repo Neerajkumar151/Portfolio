@@ -8,33 +8,33 @@ import { supabase } from "../../lib/supabase";
 
 const servicesData = [
   {
+    icon: <FaRobot />,
+    title: "Generative AI Applications",
+    description:
+      "Building AI-powered applications using LLM APIs, chatbots, and prompt-based workflows for real-world use cases.",
+  },
+  {
     icon: <FaReact />,
     title: "Web & SaaS Development",
     description:
-      "Building modern web apps and SaaS platforms using React, Next.js, and Tailwind CSS. Examples: GenieAi, Cloud Storage Projects.",
+      "Developing modern web and SaaS applications using React, Tailwind CSS, and clean component-based architecture.",
   },
   {
     icon: <FaDatabase />,
-    title: "Database & Backend",
+    title: "Backend & Databases",
     description:
-      "Designing and managing scalable databases using MongoDB, Supabase, and building backend APIs for web apps.",
+      "Designing backend logic, authentication, and databases using Supabase and REST APIs.",
   },
   {
     icon: <FaCloud />,
-    title: "Cloud & Deployment",
+    title: "Deployment & Cloud",
     description:
-      "Deploying and maintaining cloud solutions for web applications using AWS, Vercel, and other cloud platforms.",
-  },
-  {
-    icon: <FaRobot />,
-    title: "AI Integration & Automation",
-    description:
-      "Integrating AI for projects like Resume Analyzer, job suggestion engines, and other intelligent systems.",
+      "Deploying and managing applications using cloud platforms like Vercel with scalable and reliable setups.",
   },
 ];
 
 const Services = () => {
-  const fullText = "Hi, I'm Neeraj Kumar";
+  const fullText = "Services as GenAI Developer";
   const [displayedText, setDisplayedText] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState("");
@@ -48,7 +48,7 @@ const Services = () => {
       setDisplayedText((prev) => prev + fullText.charAt(index));
       index++;
       if (index === fullText.length) clearInterval(interval);
-    }, 100);
+    }, 80);
     return () => clearInterval(interval);
   }, []);
 
@@ -66,7 +66,7 @@ const Services = () => {
 
     const firstName = name.trim().split(" ")[0].toLowerCase();
     if (!email.toLowerCase().includes(firstName)) {
-      showToast("Either Your name or Email is Incorrect!!!!");
+      showToast("Name and email do not match!");
       return;
     }
 
@@ -83,13 +83,11 @@ const Services = () => {
       ]);
 
       if (error) {
-        console.error("Error saving contact:", error.message);
-        showToast("Something went wrong! Try again.");
+        showToast("Something went wrong. Try again.");
         setIsSubmitting(false);
         return;
       }
 
-      // Trigger resume download
       const link = document.createElement("a");
       link.href = "/resume.pdf";
       link.download = "Neeraj_Kumar_Resume.pdf";
@@ -101,9 +99,8 @@ const Services = () => {
       setEmail("");
       setShowModal(false);
       showToast("✅ Resume downloaded successfully!");
-    } catch (err) {
-      console.error(err);
-      showToast("Unexpected error occurred. Try again.");
+    } catch {
+      showToast("Unexpected error occurred.");
     } finally {
       setIsSubmitting(false);
     }
@@ -135,13 +132,13 @@ const Services = () => {
       <div className="container mx-auto relative z-20 flex flex-col items-center pt-[120px] md:pt-[140px]">
         <Circles />
 
-        {/* Typewriter Text */}
-        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+        {/* Typewriter Heading */}
+        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-center">
           {displayedText}
           <span className="inline-block w-1 bg-white animate-blink ml-1"></span>
         </h1>
 
-        {/* Services */}
+        {/* Services Grid */}
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
@@ -152,7 +149,7 @@ const Services = () => {
             <motion.div
               key={index}
               variants={fadeIn("up", 0.1 * index)}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-accent hover:text-black transition-all duration-300 cursor-pointer"
+              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-accent hover:text-black transition-all duration-300"
             >
               <div className="text-5xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
@@ -161,7 +158,7 @@ const Services = () => {
           ))}
         </motion.div>
 
-        {/* Download Resume Button */}
+        {/* Download Button */}
         <motion.button
           onClick={() => setShowModal(true)}
           variants={fadeIn("up", 0.6)}
@@ -174,15 +171,17 @@ const Services = () => {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl p-8 w-11/12 max-w-md relative">
-            <h2 className="text-2xl font-semibold mb-4 text-center">Enter your details</h2>
+          <div className="bg-white rounded-xl p-8 w-11/12 max-w-md">
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              Enter your details
+            </h2>
             <form className="flex flex-col gap-4" onSubmit={handleDownload}>
               <input
                 type="text"
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent text-black placeholder-gray-400"
+                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-accent text-black"
                 required
               />
               <input
@@ -190,14 +189,14 @@ const Services = () => {
                 placeholder="Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent text-black placeholder-gray-400"
+                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-accent text-black"
                 required
               />
               <div className="flex justify-between mt-2">
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="px-4 py-2 rounded-full border border-gray-400 text-gray-700 hover:bg-gray-100 transition"
+                  className="px-4 py-2 rounded-full border border-gray-400 text-gray-700"
                   disabled={isSubmitting}
                 >
                   Cancel
