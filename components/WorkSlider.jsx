@@ -13,12 +13,13 @@ const workSlides = {
   slides: [
     {
       images: [
+        { title: "Krishisanjivni", path: "/krishisanjivni.png", link: "https://krishisanjivni.vercel.app/" },
         { title: "GenieAi", path: "/genieai.png", link: "https://genie-ai-wine.vercel.app/" },
         { title: "SkyDrive", path: "/skydrive.PNG", link: "https://cloud-storage-webapp.vercel.app/sign-in" },
         { title: "EY hackathon Project", path: "/ez.png", link: "https://loan-pal-new.vercel.app/" },
         { title: "3 sem mini Project", path: "/3 sem project.PNG", link: "https://neerajkumar151.github.io/Mini-Project/" },
         { title: "Amazon Clone", path: "/amazon.PNG", link: "https://neerajkumar151.github.io/Amazon-frontend/clone_amazon.html" },
-        { title: "Krishisanjivni", path: "/krishisanjivni.png", link: "https://krishisanjivni.vercel.app/" },
+        
       ],
     },
   ],
