@@ -160,11 +160,18 @@ const Services = () => {
 
         {/* Download Button */}
         <motion.button
-          onClick={() => setShowModal(true)}
+          
           variants={fadeIn("up", 0.6)}
           className="mt-16 px-8 py-4 bg-accent text-black font-medium rounded-full hover:bg-white hover:text-accent transition-all duration-300"
         >
-          Download Resume
+          <a
+  href="/resume.pdf"
+  download="Neeraj_Kumar_Resume.pdf"
+  
+>
+  Download Resume
+</a>
+
         </motion.button>
       </div>
 

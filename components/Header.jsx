@@ -93,12 +93,14 @@ const Header = () => {
           {/* Right side */}
           <div className="flex items-center gap-x-6">
             <Socials />
-            <button
-              onClick={() => setShowModal(true)}
-              className="px-5 py-2 rounded-full border border-white/50 text-white hover:bg-accent hover:border-accent transition-all duration-300 font-medium"
-            >
-              Download Resume
-            </button>
+            <a
+  href="/resume.pdf"
+  download="Neeraj_Kumar_Resume.pdf"
+  className="px-5 py-2 rounded-full border border-white/50 text-white hover:bg-accent hover:border-accent transition-all duration-300 font-medium"
+>
+  Download Resume
+</a>
+
           </div>
         </div>
       </div>

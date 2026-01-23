@@ -2,37 +2,41 @@ import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import { fadeIn } from "../../variants";
 import { useState } from "react";
-import { supabase } from "../../lib/supabase"; // your supabase client
+
 import toast, { Toaster } from "react-hot-toast"; // import toast
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsLoading(true);
+  event.preventDefault();
+  setIsLoading(true);
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    const data = Object.fromEntries(formData); // convert FormData to object
+  const form = event.target;
+  const formData = new FormData(form);
 
-    try {
-      const { error } = await supabase.from("contacts").insert([data]);
+  const name = formData.get("name")?.trim();
+  const email = formData.get("email")?.trim();
+  const subject = formData.get("subject")?.trim();
+  const message = formData.get("message")?.trim();
 
-      if (error) {
-        console.error("Error saving contact:", error.message);
-        toast.error("Something went wrong! Please try again."); // toast instead of alert
-      } else {
-        toast.success("Thank you! I will get back to you ASAP."); // toast instead of alert
-        myForm.reset();
-      }
-    } catch (err) {
-      console.error(err);
-      toast.error("Unexpected error occurred. Please try again."); // toast instead of alert
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  if (!name || !email || !subject || !message) {
+    toast.success("Please fill all the fields 😊");
+    setIsLoading(false);
+    return;
+  }
+
+  if (!email.includes("@") || !email.includes(".")) {
+    toast.success("Please enter a valid email 😊");
+    setIsLoading(false);
+    return;
+  }
+
+  toast.success("Thank you! I will get back to you ASAP 🚀");
+  form.reset();
+  setIsLoading(false);
+};
+
 
   return (
     <div className="relative h-full overflow-hidden">
