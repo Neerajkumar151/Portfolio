@@ -66,7 +66,7 @@ export default function ScreenGuard({ children }) {
           </h1>
 
           <p className="text-[17px] font-normal leading-[1.65] text-[#6e6e73] mb-10 max-w-[420px] animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-            RankMySkills is crafted for a larger canvas to ensure optimal visual clarity. Please access the platform on a device with a minimum resolution of{' '}
+            This Portfolio is crafted for a larger canvas to ensure optimal visual clarity. Please access the platform on a device with a minimum resolution of{' '}
             <span className="font-semibold text-[#1d1d1f] inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-b from-gray-50 to-gray-100 rounded-lg border border-gray-200/60 shadow-sm">
               1200 × 700
             </span>
